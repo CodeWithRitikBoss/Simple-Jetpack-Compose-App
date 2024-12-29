@@ -12,8 +12,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.ritikcoder.simplejetpackcomposeapp.ui.theme.SimpleJetpackComposeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +23,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Column {
+            Column (modifier = Modifier.fillMaxSize().padding(0.dp, 50.dp, 0.dp, 0.dp),
+                horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(text = "Hello World.")
                 Text(text = "Hello Android.")
                 Button(onClick = {
